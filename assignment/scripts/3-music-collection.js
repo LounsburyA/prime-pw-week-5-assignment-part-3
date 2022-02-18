@@ -43,4 +43,20 @@ console.log(collection);
 // // for (let prop in person){   //person object stand in
 // console.log(`${prop}: ${person[prop]}`);
 // }
- 
+ //console.log(collection.length);
+// function showCollection(array){
+//   console.log(collection.length);
+//   for( let i = 0; i < collection.length; i++){
+//     console.log(collection[i]);
+//   }
+// }
+// console.log(showCollection(collection));
+// !TEST!let house = ['dogs','cats','mittens']
+function showCollection(array){
+  console.log(array.length);
+  for( let i = 0; i <array.length; i++){
+    console.log(array[i]);
+  }return array;
+}
+console.log(showCollection(collection));
+//!TEST!console.log(showCollection(house));
