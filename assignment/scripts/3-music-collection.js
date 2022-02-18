@@ -20,12 +20,17 @@ let album = {
 // exampleconsole.log(addToCollection(`Title by Artist, published in year`));
 // !test! console.log(addToCollection('bugs', 'cat', 1995));
 // 90's MUSIC TIME!!!!!
-console.log(addToCollection('Weezer','Blue Albun', 1994 ));
-console.log(addToCollection('Weezer','Pinkerton', 1996));
-console.log(addToCollection('Wyclef','The Carnival',1997 ));
-console.log(addToCollection('Nirvana','Nevermind', 1991 ));
-console.log(addToCollection('Cake','Fashion Nugget', 1996 ));
-console.log(addToCollection('Alanis Morissette','Jagged Little Pill', 1995));
+console.log(addToCollection(`Title: ${'Blue Album'}`,`by ${'Weezer'}`,`published in ${1994}` ));
+console.log(addToCollection(`Title: ${'Pinkerton'}`, `by  ${'Weezer'}`, `published in ${1996}`));
+console.log(addToCollection(`Title: ${'The Carnival'}`,`by ${'Wyclef'}`,`published in ${1997}` ));
+console.log(addToCollection(`Title: ${'Nevermind'}`,`by ${'Nirvana'}`,`published in ${1991}` ));
+console.log(addToCollection(`Title: ${'Fashion Nugget'}`,`by ${'Cake'}`,`published in ${1996}` ));
+console.log(addToCollection(`Title: ${'Jagged Little Pill'}`,`by ${'Alanis Morissette'}`,`published in ${1995}` ));
+
+// wrong format
+// console.log(addToCollection('Fashion Nugget','Cake', 1996 ));
+// console.log(addToCollection('Jagged Little Pill','Alanis Morissette', 1995));
+
 console.log(collection);
 //function to add to array
 // let basket = [];
@@ -68,3 +73,9 @@ console.log(showCollection(collection));
 //   'artist' paramater
 //    empty array   find[]
 //     loop collection  add matching artists to array
+// function findByArtist('artist'){
+// let find= []
+//   for( let i = 0; i <array.length; i++){
+//     if thing = artist push to array
+//   }
+// }
