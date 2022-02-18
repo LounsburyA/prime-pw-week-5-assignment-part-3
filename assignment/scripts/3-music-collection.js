@@ -19,6 +19,7 @@ let album = {
 }
 // exampleconsole.log(addToCollection(`Title by Artist, published in year`));
 // !test! console.log(addToCollection('bugs', 'cat', 1995));
+// 90's MUSIC TIME!!!!!
 console.log(addToCollection('Weezer','Blue Albun', 1994 ));
 console.log(addToCollection('Weezer','Pinkerton', 1996));
 console.log(addToCollection('Wyclef','The Carnival',1997 ));
@@ -39,7 +40,7 @@ console.log(collection);
 
 // for (let key in object ){
 //   console.log(object[key]);      // for in loop reference
-// }
+// }    ----- scratch this, not using for in loops yet---
 // // for (let prop in person){   //person object stand in
 // console.log(`${prop}: ${person[prop]}`);
 // }
@@ -60,3 +61,10 @@ function showCollection(array){
 }
 console.log(showCollection(collection));
 //!TEST!console.log(showCollection(house));
+
+
+//------------FIND BY ARTIST FUNCTION-------------
+//  parts breakdown:
+//   'artist' paramater
+//    empty array   find[]
+//     loop collection  add matching artists to array
