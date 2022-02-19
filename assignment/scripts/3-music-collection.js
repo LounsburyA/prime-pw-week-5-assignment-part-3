@@ -15,23 +15,23 @@ let album = {
 }
 
   collection.push(album);
-  return album;
+  return console.log(album);
 }
+addToCollection('Blue Album', 'Weezer', 1994)
+addToCollection('Pinkerton', 'Weezer', 1996)
+addToCollection('Nevermind', 'Nirvana', 1991)
+addToCollection('Fashion Nugget', 'Cake', 1996)
+addToCollection('The Carnival', 'Wyclef', 1997)
+addToCollection('Jagged Little Pill', 'Alanis Morissette', 1995)
 // exampleconsole.log(addToCollection(`Title by Artist, published in year`));
 // !test! console.log(addToCollection('bugs', 'cat', 1995));
 // 90's MUSIC TIME!!!!!
-console.log(addToCollection(`Title: ${'Blue Album'}`,`by ${'Weezer'}`,`published in ${1994}` ));
-console.log(addToCollection(`Title: ${'Pinkerton'}`, `by  ${'Weezer'}`, `published in ${1996}`));
-console.log(addToCollection(`Title: ${'The Carnival'}`,`by ${'Wyclef'}`,`published in ${1997}` ));
-console.log(addToCollection(`Title: ${'Nevermind'}`,`by ${'Nirvana'}`,`published in ${1991}` ));
-console.log(addToCollection(`Title: ${'Fashion Nugget'}`,`by ${'Cake'}`,`published in ${1996}` ));
-console.log(addToCollection(`Title: ${'Jagged Little Pill'}`,`by ${'Alanis Morissette'}`,`published in ${1995}` ));
 
 // wrong format
 // console.log(addToCollection('Fashion Nugget','Cake', 1996 ));
 // console.log(addToCollection('Jagged Little Pill','Alanis Morissette', 1995));
 
-console.log(collection);
+//console.log(collection);
 //function to add to array
 // let basket = [];
 // function addItem(item,cat, taco){
@@ -43,28 +43,32 @@ console.log(collection);
 
 //  ------SHOW COLLECTION FUNCTION------------
 
-// for (let key in object ){
-//   console.log(object[key]);      // for in loop reference
-// }    ----- scratch this, not using for in loops yet---
-// // for (let prop in person){   //person object stand in
-// console.log(`${prop}: ${person[prop]}`);
-// }
- //console.log(collection.length);
+
 // function showCollection(array){
-//   console.log(collection.length);
+//   //console.log(collection.length);
 //   for( let i = 0; i < collection.length; i++){
-//     console.log(collection[i]);
+//     return console.log(collection[2]);
 //   }
 // }
+// showCollection(collection)
+
 // console.log(showCollection(collection));
 // !TEST!let house = ['dogs','cats','mittens']
-function showCollection(array){
-  console.log(array.length);
-  for( let i = 0; i <array.length; i++){
-    console.log(array[i]);
-  }return array;
-}
-console.log(showCollection(collection));
+ function showCollection(array){
+   console.log(array.length);
+   for( let i = 0; i <array.length; i++){
+  console.log(`Title ${array[i].title}, by ${array[i].artist}, published in ${array[i].yearPublished}`);
+  }
+ }
+ showCollection(collection)
+// function showCollection(array){
+//   console.log(array.length);
+//   for( let i = 0; i <array.length; i++){
+//     console.log(array[i]);
+//   }return array;
+// }
+//console.log(showCollection(collection));
+
 //!TEST!console.log(showCollection(house));
 
 
@@ -73,9 +77,26 @@ console.log(showCollection(collection));
 //   'artist' paramater
 //    empty array   find[]
 //     loop collection  add matching artists to array
-// function findByArtist('artist'){
-// let find= []
-//   for( let i = 0; i <array.length; i++){
-//     if thing = artist push to array
+// function findByArtist(artist){
+// let find = [];
+//   for( let i = 0; i <collection.length; i++){
+//     if (collection[i].artist === artist) {
+//       find.push(artist[i]);
+//     }
 //   }
+//   return find;
 // }
+// console.log(findByArtist('Weezer'));
+//
+function findByArtist(artist){
+let find = [];
+  for( let i = 0; i <collection.length; i++){
+    if (collection[i].artist === artist) {
+      find.push(collection[i]);
+    }
+  }
+  return find;
+}
+console.log(findByArtist('Weezer'));
+console.log(findByArtist('Taking back Sunday'));
+console.log(findByArtist('Cake'));
