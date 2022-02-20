@@ -61,6 +61,7 @@ addToCollection('Jagged Little Pill', 'Alanis Morissette', 1995)
   }
  }
  showCollection(collection)
+ console.log(showCollection(collection));
 // function showCollection(array){
 //   console.log(array.length);
 //   for( let i = 0; i <array.length; i++){
